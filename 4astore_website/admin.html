@@ -1,0 +1,60 @@
+<!doctype html>
+<html lang="en">
+<head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1"><title>Admin - 4ASTORE</title><link rel="stylesheet" href="style.css"><script defer src="script.js"></script></head>
+<body>
+<header><div class="logo"><h1>4ASTORE Admin</h1><p class="site-slogan">Secure Panel</p></div></header>
+
+<div class="container">
+  <div id="adminLoginSection" class="auth-container">
+    <h2>Admin Login</h2>
+    <input id="adminUidField" class="input" placeholder="UID">
+    <input id="adminPassField" class="input" placeholder="Password" type="password">
+    <div style="margin-top:8px"><button class="btn" onclick="adminLoginPage()">Login</button></div>
+    <p style="margin-top:8px;color:var(--muted)">UID: rai@434455 • Pass: Rai@431465</p>
+  </div>
+
+  <div id="adminPanelMain" class="admin-panel" style="display:none">
+    <div class="admin-tabs">
+      <button onclick="showAdminTab('productsTab')">Products</button>
+      <button onclick="showAdminTab('ordersTab')">Orders</button>
+      <button onclick="showAdminTab('settingsTab')">Site Settings</button>
+      <button onclick="adminLogout()">Logout</button>
+    </div>
+
+    <div class="admin-grid">
+      <div class="admin-left">
+        <div id="productsTab" class="admin-section">
+          <h3>Manage Products</h3>
+          <div style="margin-bottom:8px">
+            <input id="newTitle" class="input" placeholder="Title">
+            <input id="newPrice" class="input" placeholder="Price">
+            <input id="newImage" class="input" placeholder="Image URL">
+            <input id="newDesc" class="input" placeholder="Short description">
+            <div style="margin-top:8px"><button class="btn" onclick="adminCreateProduct()">Add Product</button></div>
+          </div>
+          <div id="adminProductsList"></div>
+        </div>
+
+        <div id="ordersTab" class="admin-section" style="display:none">
+          <h3>Orders</h3>
+          <div id="adminOrdersList"></div>
+        </div>
+      </div>
+
+      <div class="admin-right">
+        <div id="settingsTab" class="admin-section" style="display:none">
+          <h3>Site Settings</h3>
+          <input id="siteNameInput" class="input" placeholder="Site name">
+          <input id="siteSloganInput" class="input" placeholder="Slogan">
+          <input id="siteHeroInput" class="input" placeholder="Hero image URL">
+          <textarea id="siteDescInput" class="input" placeholder="Homepage description"></textarea>
+          <div style="margin-top:8px"><button class="btn" onclick="adminSaveSiteSettings()">Save Settings</button></div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+
+<footer><div class="footer-bottom">4ASTORE Admin © 2025</div></footer>
+</body>
+</html>

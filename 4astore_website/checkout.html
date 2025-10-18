@@ -1,0 +1,44 @@
+<!doctype html>
+<html lang="en">
+<head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1"><title>Checkout - 4ASTORE</title><link rel="stylesheet" href="style.css"><script defer src="script.js"></script></head>
+<body>
+<header>
+  <div class="logo"><h1 class="site-name">4ASTORE</h1><p class="site-slogan">Luxury Branded Watches</p></div>
+  <nav><a href="index.html">Home</a><a href="products.html">Products</a><a href="cart.html">Cart</a></nav>
+</header>
+
+<div class="container">
+  <h3 style="color:var(--gold)">Checkout</h3>
+  <div id="checkoutSummary" class="order-summary"></div>
+
+  <div class="checkout-section">
+    <form id="checkoutForm" onsubmit="return placeOrder(event)">
+      <div class="form-row">
+        <input id="checkoutName" class="input" placeholder="Full name" required>
+        <input id="checkoutPhone" class="input" placeholder="Phone (03...)" required>
+      </div>
+      <div class="form-row">
+        <input id="checkoutEmail" class="input" placeholder="Email" required>
+      </div>
+      <div class="form-row">
+        <input id="checkoutProvince" class="input" placeholder="Province" required>
+        <input id="checkoutCity" class="input" placeholder="City" required>
+      </div>
+      <div class="form-row">
+        <input id="checkoutArea" class="input" placeholder="Area" required>
+        <input id="checkoutStreet" class="input" placeholder="Street / House no" required>
+      </div>
+      <div style="margin-top:12px">
+        <label style="color:var(--gold)">Payment method</label><br>
+        <label><input type="radio" name="payment" value="Cash on Delivery" checked> Cash on Delivery</label><br>
+        <label><input type="radio" name="payment" value="Easypaisa"> Easypaisa (03431465498 - Rai Abuzar Ameer)</label>
+      </div>
+      <div style="margin-top:12px"><button class="btn" type="submit">Place Order</button></div>
+    </form>
+    <div id="orderSuccess" class="order-success" style="display:none;margin-top:12px"></div>
+  </div>
+</div>
+
+<footer><div class="footer-bottom">4ASTORE © 2025</div></footer>
+</body>
+</html>
